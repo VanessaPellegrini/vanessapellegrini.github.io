@@ -1,0 +1,38 @@
+@mixin hexagono(){
+  margin-top: 5%; 
+    height: 50px; 
+    width: 90px; 
+    background: $bere; 
+    position: relative; 
+    float: left; 
+    margin-left: 3%; 
+    cursor: pointer; 
+}
+@mixin hexagonoBefore(){
+	position: absolute; 
+  bottom: 100%; 
+  content: ''; 
+  height: 0; 
+  width: 0; 
+  border-width: 0 45px 30px 45px; 
+  border-style: solid; 
+  border-color: $bere transparent;
+}
+@mixin hexagonoAfter(){
+	position: absolute; 
+    top: 100%; 
+    content: ''; 
+    height: 0; 
+    width: 0; 
+    border-width: 30px 45px 0 45px; 
+    border-style: solid; 
+    border-color: $bere transparent; 
+}
+@mixin tituloHab(){
+  background-color: $bere;
+  width: 25%;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  color: $cele;
+  font-weight: bold;
+}

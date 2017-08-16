@@ -1,0 +1,35 @@
+{
+  "name": "portafoliovanessapellegrini",
+  "version": "1.0.0",
+  "description": "Portafolio Vanessa Pellegrini",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanessaPellegrini/PortafolioVanessaPellegrini.git"
+  },
+  "author": "Vanessa Pellegrini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanessaPellegrini/PortafolioVanessaPellegrini/issues"
+  },
+  "homepage": "https://github.com/VanessaPellegrini/PortafolioVanessaPellegrini#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.1",
+    "particles.js": "^2.0.0",
+    "typed.js": "^2.0.5"
+  }
+}

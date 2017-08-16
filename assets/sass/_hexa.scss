@@ -1,0 +1,144 @@
+/*https://codepen.io/zephyr/pen/JWvwWx?depth=everything&limit=all&order=popularity&page=2&q=honeycomb&show_forks=false*/
+$hexaRadius: 40px;
+$hexaGutter: 10px;
+
+$hexaHeight: $hexaRadius * 2;
+$hexaWidth: $hexaRadius * 2 * 1.732;
+
+.honeycomb {
+    margin: $hexaRadius auto;
+    text-align: center;
+    box-sizing: border-box;
+    perspective: 1000px;
+    position: relative;
+    height: ($hexaHeight * 2) + ($hexaHeight + $hexaRadius + $hexaGutter) * 2;
+    width: ($hexaWidth) + ($hexaWidth + $hexaGutter) * 2 + ($hexaWidth + $hexaGutter) / 2;
+}
+
+.hexagon {
+    position: relative;
+    float: left;
+    margin: $hexaRadius 0;
+    background-color: $bere;
+    text-align: center;
+  transform-style: preserve-3d;
+    transition: transform 0.3s, color 0.3s;
+    color: #fff;
+    
+    &,
+    &:before,
+    &:after {
+        height: $hexaHeight;
+        width: $hexaWidth;
+        box-sizing: border-box;
+    }
+    
+    &:before,
+    &:after {
+        background-color: inherit;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    &:before {
+        transform: rotate(-60deg);
+    }
+    
+    &:after {
+        transform: rotate(60deg);
+    }
+    
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        height: $hexaRadius * 2 * 1.25;
+        width: $hexaRadius * 2 * 1.25;
+        font-size: 16px;
+        line-height: 1.4;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    
+    i {
+        font-size: 60px;
+    }
+    
+    span {
+        display: block;
+    }
+    
+    .front {
+        z-index: 2;
+        transform: translate3d(-50%, -50%, 0) rotateY(0deg);
+    }
+
+    .back {
+        transform: translate3d(-50%, -50%, 0) rotateY(180deg);
+    }
+        
+    .hexagontent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.hexahover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &:hover .hexagon, &:focus .hexagon {
+        transform: rotateY(180deg);
+        background: $cele;
+    }
+    
+    &:nth-child(2){
+        left: $hexaWidth + $hexaGutter;
+    }
+    
+    &:nth-child(3){
+        left: ($hexaWidth + $hexaGutter) * 2;
+    }
+    
+    &:nth-child(4){
+        left: ($hexaWidth + $hexaGutter) / 2;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter);
+    }
+    
+    &:nth-child(5){
+        left: ($hexaWidth + $hexaGutter) + ($hexaWidth + $hexaGutter) / 2;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter);
+    }
+    
+    &:nth-child(6){
+        left: ($hexaWidth + $hexaGutter) * 2 + ($hexaWidth + $hexaGutter) / 2;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter);
+    }
+    
+    &:nth-child(7){
+        left: 0;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter) * 2;
+    }
+    
+    &:nth-child(8){
+        left: $hexaWidth + $hexaGutter;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter) * 2;
+    }
+    
+    &:nth-child(9){
+        left: ($hexaWidth + $hexaGutter) * 2;
+        top: ($hexaHeight + $hexaRadius + $hexaGutter) * 2;
+    }
+}

@@ -1,0 +1,197 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: $bere;
+	font-family: 'Roboto', sans-serif;
+	a{
+		text-decoration: none;
+	}
+	header.navBar{
+		nav.navbar.navbar-inverse.navbar-fixed-top{
+			background-color: transparent;
+			border-color:transparent;
+		}
+		#bs-example-navbar-collapse-1{
+			ul{
+				li{
+					a{
+						color: $cele;
+					}
+				}
+			}
+		}
+		ul.nav.navbar-nav{
+			li{
+				a{
+					i.fa.fa-home.fa-2x:hover, i.fa.fa-user.fa-2x:hover,i.fa.fa-cog.fa-2x:hover,
+					i.fa.fa-briefcase.fa-2x:hover,i.fa.fa-envelope.fa-2x:hover {
+						color: $amarillo;
+					}
+				}
+			}
+		}
+	}
+	/*BIENVENIDA*/
+	.bienvenida{
+/* 		background-image:url(../../dist/img/background.png);
+		height: 100vh; */
+		div.container{
+			div.row{
+				div.col-md-6{
+					position:relative;
+					img{
+						position:relative;
+						z-index:2;
+						top: -8vh;
+					}
+					div.presentacion{
+						font-family: 'Anton', sans-serif;
+						color: $cele;
+						position: relative;
+    					top: 25vh;
+    					z-index: 1;
+					}
+				}
+			}
+			div.row{
+				.col-md-12{
+					position:relative;
+					z-index: 2;
+					.redes.text-center{
+						    padding-left: 27%;
+						    position: relative;
+    						top: -35px;
+						ul{
+							text-decoration:none;
+							li{
+								position: relative;
+    							display: inline-flex;
+    							padding: 0 2%;
+    							i{
+    								font-size: 40px;
+    								color: $cele;
+    								&:hover{
+    									color: $amarillo;
+    								}
+    							}
+    							a{
+    								font-size: 20px;
+    								color: $cele;
+									text-decoration:none;
+    							}	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/*ABOUT ME*/
+	.aboutMe.container{
+		background-color: $cele;
+		height: 100vh;
+		border-top-left-radius: 2em;
+    	border-top-right-radius: 2em;
+    	padding-top: 6%;
+    	.row{
+    		.col-md-12{
+    			@include tituloHab();
+    			position: relative;
+    			top: -3vh;
+    			left: 11vh;
+    			h3{
+    				margin-left: 22%;
+    				margin-top: 4%;
+    			}
+    		}
+    	}
+		.row{
+			.col-md-6.izquierda{
+				height:66vh;
+				.imgAbout{
+					img{
+						position: relative;
+					   	top: 2vh;
+    					left: 26vh;
+					}
+				}
+			}
+			.col-md-4.offset-md-2{
+				.cajaTexto{
+					color: $bere;
+					font-weight: bold;
+					text-align: justify;
+					a{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	/*HABILIDADES*/
+		.habilities.container{
+			padding: 6%;
+			background-image: url(../../dist/img/wallUno.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			height:100vh;
+			border-top: 5px solid $bere;
+			h2{
+				color: $bere;
+			}
+		}
+	/*proyectos*/
+	.projects.container{
+		background-color: $amarillo;
+		border-top: 5px solid $bere;
+		height: 100vh;
+		.row{
+			.col-md-12{
+				//margin-top: 3%;
+				h3{
+					color: $bere;
+				}
+			}
+		}
+	}	
+	/*footer*/
+	footer{
+		background-color:$cele;
+		border-top: 5px solid $bere;
+		height: 33vh;
+		ul.text-center{
+			list-style: none;
+			position: relative;
+    		display: inline-flex;
+    		left: -4vh;
+    		li{
+    			a.redSocial{
+    				padding: 10% 50%;
+	    			font-size:30px;
+	    			position:relative;
+	    			top: 3vh;
+	    			color: $bere;
+	    			text-decoration:none;
+	    			&:hover{
+	    				color: $amarillo;
+	    			}
+    			}
+    		}
+		}
+		.cajaCorp{
+			padding-top: 4%;
+		}
+	}
+	canvas{
+		position: relative;
+    	margin-top: -44%;
+	}
+	#particles-js {
+	    width: 100%;
+	    height: 100vh;
+	    position: relative;
+	}
+}
+
