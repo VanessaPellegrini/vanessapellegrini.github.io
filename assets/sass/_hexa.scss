@@ -13,6 +13,9 @@ $hexaWidth: $hexaRadius * 2 * 1.732;
     position: relative;
     height: ($hexaHeight * 2) + ($hexaHeight + $hexaRadius + $hexaGutter) * 2;
     width: ($hexaWidth) + ($hexaWidth + $hexaGutter) * 2 + ($hexaWidth + $hexaGutter) / 2;
+    @media screen and (max-width: $break-small) {
+        padding: 50%;
+    }
 }
 
 .hexagon {
@@ -21,7 +24,7 @@ $hexaWidth: $hexaRadius * 2 * 1.732;
     margin: $hexaRadius 0;
     background-color: $bere;
     text-align: center;
-  transform-style: preserve-3d;
+    transform-style: preserve-3d;
     transition: transform 0.3s, color 0.3s;
     color: #fff;
     
@@ -94,7 +97,9 @@ $hexaWidth: $hexaRadius * 2 * 1.732;
     position: absolute;
     top: 0;
     left: 0;
-    
+    @media screen and (max-width: $break-small) {
+        width: 5%;
+    }
     &:focus {
         outline: none;
     }

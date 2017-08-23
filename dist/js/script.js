@@ -12736,16 +12736,16 @@ function launchParticlesJS(a,e){var i=document.querySelector("#"+a+" > canvas");
 /* config dom id (optional) + config particles params */
 particlesJS('particles-js', {
   particles: {
-    color: '#96DDD2',
+    color: '#fff',
     shape: 'triangle', // "circle", "edge" or "triangle"
-    opacity: 1,
-    size: 6.5,
+    opacity: 0.75,
+    size: 4.5,
     size_random: true,
     nb: 100,
     line_linked: {
       enable_auto: true,
       distance: 100,
-      color: '#96DDD2',
+      color: '#fff',
       opacity: 1,
       width: 1,
       condensed_mode: {

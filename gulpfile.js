@@ -21,7 +21,7 @@ gulp.task('style', function(){
 });
 
 gulp.task('webserver', function(){
-    gulp.src('../portafolioVanessaPellegrini/')
+    gulp.src('../portafolio/')
     .pipe(webserver({
         fallback: 'index.html',
         livereload: true,
@@ -29,6 +29,10 @@ gulp.task('webserver', function(){
         open: true
     }));
 });
+gulp.task('watch', function(){
+    gulp.watch('assets/js/*.js', ['script']);
+});
+
 gulp.task('watch', function(){
     gulp.watch('assets/sass/*.scss', ['style']);
 });

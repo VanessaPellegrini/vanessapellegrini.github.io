@@ -9,6 +9,35 @@ body{
 		text-decoration: none;
 	}
 	header.navBar{
+		div.navbar-header{
+			
+			button.navbar-toggle{
+				border: none;
+   				background: transparent;
+
+	   			&.collapse{
+	   				border: none;
+					background: transparent;
+	   			}
+	   			span.icon-bar{
+	   				background-color: $cele;
+	   			}
+			}
+		}
+		div#bs-example-navbar-collapse-1{
+			&.navbar-collapse.navbar-right.collapse.in{
+				border-color:transparent;
+			}
+			ul{
+				position: relative;
+    			float: right;
+				li{
+					a{
+
+					}
+				}
+			}
+		}   
 		nav.navbar.navbar-inverse.navbar-fixed-top{
 			background-color: transparent;
 			border-color:transparent;
@@ -45,6 +74,13 @@ body{
 						position:relative;
 						z-index:2;
 						top: -8vh;
+						@media screen and (max-width: $break-small) {
+						    width: 40%;
+						    float: none;
+						   	position: relative;
+						    top: -2vh;
+						    left: 16vh;
+						}
 					}
 					div.presentacion{
 						font-family: 'Anton', sans-serif;
@@ -52,6 +88,15 @@ body{
 						position: relative;
     					top: 25vh;
     					z-index: 1;
+    					@media screen and (max-width: $break-small) {
+    						top: 0vh;
+    					}
+    					h2, h4{
+    						@media screen and (max-width: $break-small) {
+    							position:relative;
+    							text-align: center; 
+    						}
+    					}
 					}
 				}
 			}
@@ -63,6 +108,11 @@ body{
 						    padding-left: 27%;
 						    position: relative;
     						top: -35px;
+    						@media screen and (max-width: $break-small) {
+    							left: -9vh;
+    							position: relative;
+    							top: 3vh;
+    						}
 						ul{
 							text-decoration:none;
 							li{
@@ -111,10 +161,23 @@ body{
 			.col-md-6.izquierda{
 				height:66vh;
 				.imgAbout{
-					img{
+					img.imgCorriente{
 						position: relative;
 					   	top: 2vh;
     					left: 26vh;
+    					@media screen and (max-width: $break-small) {
+    						display:none;
+    					}
+					}
+					img.imgResponsive{
+						display:none;
+						@media screen and (max-width: $break-small) {
+    						display:block;
+    						width: 34%;
+						    position: relative;
+						    left: 2vh;
+						    top: 6vh;
+    					}
 					}
 				}
 			}
@@ -123,6 +186,23 @@ body{
 					color: $bere;
 					font-weight: bold;
 					text-align: justify;
+					h3{
+						@media screen and (max-width: $break-small) {
+    						position: relative;
+   		 					top: -60vh;
+						    right: -28vh;
+						    width: 46%
+    					}
+					}
+					article{
+						@media screen and (max-width: $break-small) {
+    						position: relative;
+						    top: -59vh;
+						    right:-3vh;
+    						width:87%
+						   /*  font-size:13px; */
+    					}
+					}
 					a{
 						color: #fff;
 					}
@@ -138,8 +218,30 @@ body{
 			background-attachment: fixed;
 			height:100vh;
 			border-top: 5px solid $bere;
+			@media screen and (max-width: $break-small) {
+	    		padding-top: 15%;
+	    		padding-left: 10%;
+    		}
 			h2{
 				color: $bere;
+			}
+			.honeycomb{
+				@media screen and (max-width: $break-small) {
+    				position:relative;
+    				left: 2.5vh;
+    				z-index: 5;
+    			}
+				.hexahover{
+					@media screen and (max-width: $break-small) {
+    					display:none;
+    				}
+				}
+				.hexahover.responsiveHexa{
+					@media screen and (max-width: $break-small) {
+    					display:block;
+    				}
+				}
+				
 			}
 		}
 	/*proyectos*/
@@ -147,6 +249,11 @@ body{
 		background-color: $amarillo;
 		border-top: 5px solid $bere;
 		height: 100vh;
+		@media screen and (max-width: $break-small) {
+    		height: 100%;
+    		padding-bottom: 5%;
+    		padding-left: 10%;
+    	}
 		.row{
 			.col-md-12{
 				//margin-top: 3%;
@@ -187,6 +294,10 @@ body{
 	canvas{
 		position: relative;
     	margin-top: -44%;
+    	@media screen and (max-width: $break-small) {
+    		position: relative;
+    		margin-top: -152%;
+    	}
 	}
 	#particles-js {
 	    width: 100%;
