@@ -3,8 +3,8 @@ particlesJS('particles-js', {
   particles: {
     color: '#fff',
     shape: 'triangle', // "circle", "edge" or "triangle"
-    opacity: 0.75,
-    size: 4.5,
+    opacity: 0.5,
+    size: 3,
     size_random: true,
     nb: 100,
     line_linked: {
@@ -32,7 +32,7 @@ particlesJS('particles-js', {
     detect_on: 'canvas', // "canvas" or "window"
     mode: 'grab',
     line_linked: {
-      opacity: .5
+      opacity: 0.5
     },
     events: {
       onclick: {

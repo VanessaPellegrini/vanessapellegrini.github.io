@@ -28,6 +28,7 @@
     border-style: solid; 
     border-color: $bere transparent; 
 }
+/*end hexagon*/
 @mixin tituloHab(){
   background-color: $bere;
   width: 25%;
@@ -36,3 +37,34 @@
   color: $cele;
   font-weight: bold;
 }
+@mixin aboutMeResponsive(){
+  display:block;
+  width: 100%;
+  position: relative;
+  left: 2vh;
+  top: 6vh;
+}
+/*estilos responsive bienvenida*/
+@mixin welcomeResponsive(){
+  width: 100%;
+  float: none;
+  position: relative;
+  top: -2vh;
+  left: 15vh;
+}
+@mixin presentResponsive(){
+  position:relative;
+/*   left: 2.5vh; */
+  top: 2vh;
+  padding:0;
+}
+@mixin canvasResponsive(){
+  position: relative;
+  margin-top: -152%;
+}
+@mixin redesResponsive(){
+  left: -9vh;
+  position: relative;
+  top: 10vh;
+}
+/*responsive para celulares ultra small*/

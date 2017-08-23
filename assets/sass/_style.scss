@@ -9,8 +9,7 @@ body{
 		text-decoration: none;
 	}
 	header.navBar{
-		div.navbar-header{
-			
+		div.navbar-header{	
 			button.navbar-toggle{
 				border: none;
    				background: transparent;
@@ -31,11 +30,6 @@ body{
 			ul{
 				position: relative;
     			float: right;
-				li{
-					a{
-
-					}
-				}
 			}
 		}   
 		nav.navbar.navbar-inverse.navbar-fixed-top{
@@ -64,8 +58,25 @@ body{
 	}
 	/*BIENVENIDA*/
 	.bienvenida{
-/* 		background-image:url(../../dist/img/background.png);
-		height: 100vh; */
+		div#introMySelf.presentacion.col-xs-12{
+			/*responsive small mobile*/
+			@media screen and (max-width: $mobileSmall) {
+				@include presentResponsive();
+				width: 94%;
+			}
+			h2{
+				@media screen and (max-width: $mobileSmall) {
+					font-size: 20px;
+				}
+			}
+			/*responsive medium and large mobile*/
+			@media screen and (max-width: $mobileMedium) {
+			    @include presentResponsive();
+			}
+			@media screen and (max-width: $mobileLarge) {
+				@include presentResponsive();
+			}
+		}
 		div.container{
 			div.row{
 				div.col-md-6{
@@ -74,44 +85,53 @@ body{
 						position:relative;
 						z-index:2;
 						top: -8vh;
-						@media screen and (max-width: $break-small) {
-						    width: 40%;
-						    float: none;
-						   	position: relative;
-						    top: -2vh;
-						    left: 16vh;
+						@media screen and (max-width: $mobileSmall) {
+						    @include welcomeResponsive();
+						}
+						@media screen and (max-width: $mobileMedium) {
+						    @include welcomeResponsive();
+						}
+						@media screen and (max-width: $mobileLarge) {
+						    @include welcomeResponsive();
 						}
 					}
 					div.presentacion{
 						font-family: 'Anton', sans-serif;
 						color: $cele;
 						position: relative;
-    					top: 25vh;
+    					/* top: 25vh; */
     					z-index: 1;
-    					@media screen and (max-width: $break-small) {
-    						top: 0vh;
-    					}
-    					h2, h4{
-    						@media screen and (max-width: $break-small) {
-    							position:relative;
-    							text-align: center; 
+						#designer{
+							@media screen and (max-width: $mobileSmall) {
+    							display:none;
+    						}
+    						@media screen and (max-width: $mobileMedium) {
+    							display:none;
+    						}
+    						@media screen and (max-width: $mobileLarge) {
+    							display:none;
     						}
     					}
-					}
+    				}
+					} 
 				}
 			}
 			div.row{
-				.col-md-12{
+				.col-md-12.col-xs-12.col-sm-12{
 					position:relative;
 					z-index: 2;
 					.redes.text-center{
 						    padding-left: 27%;
 						    position: relative;
-    						top: -35px;
-    						@media screen and (max-width: $break-small) {
-    							left: -9vh;
-    							position: relative;
-    							top: 3vh;
+    						@media screen and (max-width: $mobileSmall) {
+    							@include redesResponsive();
+    							font-size: 20px;
+    						}
+    						@media screen and (max-width: $mobileMedium) {
+    							@include redesResponsive();
+    						}
+    						@media screen and (max-width: $mobileLarge) {
+    							@include redesResponsive();
     						}
 						ul{
 							text-decoration:none;
@@ -125,6 +145,9 @@ body{
     								&:hover{
     									color: $amarillo;
     								}
+    								@media screen and (max-width: $mobileSmall) {
+		    							font-size: 30px;
+		    						}
     							}
     							a{
     								font-size: 20px;
@@ -159,25 +182,40 @@ body{
     	}
 		.row{
 			.col-md-6.izquierda{
-				height:66vh;
 				.imgAbout{
 					img.imgCorriente{
 						position: relative;
 					   	top: 2vh;
     					left: 26vh;
-    					@media screen and (max-width: $break-small) {
+    					@media screen and (max-width: $mobileSmall) {
+    						display:none;
+    					}
+    					@media screen and (max-width: $mobileMedium) {
+    						display:none;
+    					}
+    					@media screen and (max-width: $mobileLarge) {
     						display:none;
     					}
 					}
 					img.imgResponsive{
 						display:none;
-						@media screen and (max-width: $break-small) {
-    						display:block;
-    						width: 34%;
-						    position: relative;
-						    left: 2vh;
-						    top: 6vh;
+						@media screen and (max-width: $mobileSmall) {
+    						@include aboutMeResponsive();
     					}
+    					@media screen and (max-width: $mobileMedium) {
+    						@include aboutMeResponsive();
+    					}
+    					@media screen and (max-width: $mobileLarge) {
+    						@include aboutMeResponsive();
+    					}
+					}
+				}
+			}
+			.cajaTexto{
+				div.row{
+					div.article.col-xs-12{
+						position: relative;
+    					top: 8vh;
 					}
 				}
 			}
@@ -186,22 +224,12 @@ body{
 					color: $bere;
 					font-weight: bold;
 					text-align: justify;
-					h3{
-						@media screen and (max-width: $break-small) {
-    						position: relative;
-   		 					top: -60vh;
-						    right: -28vh;
-						    width: 46%
-    					}
-					}
-					article{
-						@media screen and (max-width: $break-small) {
-    						position: relative;
-						    top: -59vh;
-						    right:-3vh;
-    						width:87%
-						   /*  font-size:13px; */
-    					}
+					div.row{
+						h3.col-xs-6{
+							position:relative;
+							top: 10vh;
+
+						}
 					}
 					a{
 						color: #fff;
@@ -218,30 +246,8 @@ body{
 			background-attachment: fixed;
 			height:100vh;
 			border-top: 5px solid $bere;
-			@media screen and (max-width: $break-small) {
-	    		padding-top: 15%;
-	    		padding-left: 10%;
-    		}
 			h2{
 				color: $bere;
-			}
-			.honeycomb{
-				@media screen and (max-width: $break-small) {
-    				position:relative;
-    				left: 2.5vh;
-    				z-index: 5;
-    			}
-				.hexahover{
-					@media screen and (max-width: $break-small) {
-    					display:none;
-    				}
-				}
-				.hexahover.responsiveHexa{
-					@media screen and (max-width: $break-small) {
-    					display:block;
-    				}
-				}
-				
 			}
 		}
 	/*proyectos*/
@@ -249,11 +255,6 @@ body{
 		background-color: $amarillo;
 		border-top: 5px solid $bere;
 		height: 100vh;
-		@media screen and (max-width: $break-small) {
-    		height: 100%;
-    		padding-bottom: 5%;
-    		padding-left: 10%;
-    	}
 		.row{
 			.col-md-12{
 				//margin-top: 3%;
@@ -294,15 +295,20 @@ body{
 	canvas{
 		position: relative;
     	margin-top: -44%;
-    	@media screen and (max-width: $break-small) {
-    		position: relative;
-    		margin-top: -152%;
+    	@media screen and (max-width: $mobileSmall) {
+    		@include canvasResponsive();
+    	}
+    	@media screen and (max-width: $mobileMedium) {
+    		@include canvasResponsive();
+    	}
+    	@media screen and (max-width: $mobileLarge) {
+    		@include canvasResponsive();
     	}
 	}
 	#particles-js {
 	    width: 100%;
 	    height: 100vh;
 	    position: relative;
+
 	}
-}
 
