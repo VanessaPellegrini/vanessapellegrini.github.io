@@ -1,314 +1,196 @@
+/*configuracion general*/
 *{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
-	background: $bere;
-	font-family: 'Roboto', sans-serif;
-	a{
-		text-decoration: none;
-	}
-	header.navBar{
-		div.navbar-header{	
-			button.navbar-toggle{
-				border: none;
-   				background: transparent;
-
-	   			&.collapse{
-	   				border: none;
-					background: transparent;
-	   			}
-	   			span.icon-bar{
-	   				background-color: $cele;
-	   			}
-			}
-		}
-		div#bs-example-navbar-collapse-1{
-			&.navbar-collapse.navbar-right.collapse.in{
-				border-color:transparent;
-			}
-			ul{
-				position: relative;
-    			float: right;
-			}
-		}   
-		nav.navbar.navbar-inverse.navbar-fixed-top{
-			background-color: transparent;
-			border-color:transparent;
-		}
-		#bs-example-navbar-collapse-1{
-			ul{
-				li{
-					a{
-						color: $cele;
-					}
-				}
-			}
-		}
-		ul.nav.navbar-nav{
-			li{
-				a{
-					i.fa.fa-home.fa-2x:hover, i.fa.fa-user.fa-2x:hover,i.fa.fa-cog.fa-2x:hover,
-					i.fa.fa-briefcase.fa-2x:hover,i.fa.fa-envelope.fa-2x:hover {
-						color: $amarillo;
-					}
-				}
-			}
-		}
-	}
-	/*BIENVENIDA*/
-	.bienvenida{
-		div#introMySelf.presentacion.col-xs-12{
-			/*responsive small mobile*/
-			@media screen and (max-width: $mobileSmall) {
-				@include presentResponsive();
-				width: 94%;
-			}
-			h2{
-				@media screen and (max-width: $mobileSmall) {
-					font-size: 20px;
-				}
-			}
-			/*responsive medium and large mobile*/
-			@media screen and (max-width: $mobileMedium) {
-			    @include presentResponsive();
-			}
-			@media screen and (max-width: $mobileLarge) {
-				@include presentResponsive();
-			}
-		}
-		div.container{
-			div.row{
-				div.col-md-6{
-					position:relative;
-					img{
-						position:relative;
-						z-index:2;
-						top: -8vh;
-						@media screen and (max-width: $mobileSmall) {
-						    @include welcomeResponsive();
-						}
-						@media screen and (max-width: $mobileMedium) {
-						    @include welcomeResponsive();
-						}
-						@media screen and (max-width: $mobileLarge) {
-						    @include welcomeResponsive();
-						}
-					}
-					div.presentacion{
-						font-family: 'Anton', sans-serif;
-						color: $cele;
-						position: relative;
-    					/* top: 25vh; */
-    					z-index: 1;
-						#designer{
-							@media screen and (max-width: $mobileSmall) {
-    							display:none;
-    						}
-    						@media screen and (max-width: $mobileMedium) {
-    							display:none;
-    						}
-    						@media screen and (max-width: $mobileLarge) {
-    							display:none;
-    						}
-    					}
-    				}
-					} 
-				}
-			}
-			div.row{
-				.col-md-12.col-xs-12.col-sm-12{
-					position:relative;
-					z-index: 2;
-					.redes.text-center{
-						    padding-left: 27%;
-						    position: relative;
-    						@media screen and (max-width: $mobileSmall) {
-    							@include redesResponsive();
-    							font-size: 20px;
-    						}
-    						@media screen and (max-width: $mobileMedium) {
-    							@include redesResponsive();
-    						}
-    						@media screen and (max-width: $mobileLarge) {
-    							@include redesResponsive();
-    						}
-						ul{
-							text-decoration:none;
-							li{
-								position: relative;
-    							display: inline-flex;
-    							padding: 0 2%;
-    							i{
-    								font-size: 40px;
-    								color: $cele;
-    								&:hover{
-    									color: $amarillo;
-    								}
-    								@media screen and (max-width: $mobileSmall) {
-		    							font-size: 30px;
-		    						}
-    							}
-    							a{
-    								font-size: 20px;
-    								color: $cele;
-									text-decoration:none;
-    							}	
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	/*ABOUT ME*/
-	.aboutMe.container{
-		background-color: $cele;
-		height: 100vh;
-		border-top-left-radius: 2em;
-    	border-top-right-radius: 2em;
-    	padding-top: 6%;
-    	.row{
-    		.col-md-12{
-    			@include tituloHab();
-    			position: relative;
-    			top: -3vh;
-    			left: 11vh;
-    			h3{
-    				margin-left: 22%;
-    				margin-top: 4%;
-    			}
-    		}
-    	}
-		.row{
-			.col-md-6.izquierda{
-				.imgAbout{
-					img.imgCorriente{
-						position: relative;
-					   	top: 2vh;
-    					left: 26vh;
-    					@media screen and (max-width: $mobileSmall) {
-    						display:none;
-    					}
-    					@media screen and (max-width: $mobileMedium) {
-    						display:none;
-    					}
-    					@media screen and (max-width: $mobileLarge) {
-    						display:none;
-    					}
-					}
-					img.imgResponsive{
-						display:none;
-						@media screen and (max-width: $mobileSmall) {
-    						@include aboutMeResponsive();
-    					}
-    					@media screen and (max-width: $mobileMedium) {
-    						@include aboutMeResponsive();
-    					}
-    					@media screen and (max-width: $mobileLarge) {
-    						@include aboutMeResponsive();
-    					}
-					}
-				}
-			}
-			.cajaTexto{
-				div.row{
-					div.article.col-xs-12{
-						position: relative;
-    					top: 8vh;
-					}
-				}
-			}
-			.col-md-4.offset-md-2{
-				.cajaTexto{
-					color: $bere;
-					font-weight: bold;
-					text-align: justify;
-					div.row{
-						h3.col-xs-6{
-							position:relative;
-							top: 10vh;
-
-						}
-					}
-					a{
-						color: #fff;
-					}
-				}
-			}
-		}
-	}
-	/*HABILIDADES*/
-		.habilities.container{
-			padding: 6%;
-			background-image: url(../../dist/img/wallUno.jpg);
-			background-size: cover;
-			background-attachment: fixed;
-			height:100vh;
-			border-top: 5px solid $bere;
-			h2{
-				color: $bere;
-			}
-		}
-	/*proyectos*/
-	.projects.container{
-		background-color: $amarillo;
-		border-top: 5px solid $bere;
-		height: 100vh;
-		.row{
-			.col-md-12{
-				//margin-top: 3%;
-				h3{
-					color: $bere;
-				}
-			}
-		}
-	}	
-	/*footer*/
-	footer{
-		background-color:$cele;
-		border-top: 5px solid $bere;
-		height: 33vh;
-		ul.text-center{
-			list-style: none;
-			position: relative;
-    		display: inline-flex;
-    		left: -4vh;
-    		li{
-    			a.redSocial{
-    				padding: 10% 50%;
-	    			font-size:30px;
-	    			position:relative;
-	    			top: 3vh;
-	    			color: $bere;
-	    			text-decoration:none;
-	    			&:hover{
-	    				color: $amarillo;
-	    			}
-    			}
-    		}
-		}
-		.cajaCorp{
-			padding-top: 4%;
-		}
-	}
-	canvas{
-		position: relative;
-    	margin-top: -44%;
-    	@media screen and (max-width: $mobileSmall) {
-    		@include canvasResponsive();
-    	}
-    	@media screen and (max-width: $mobileMedium) {
-    		@include canvasResponsive();
-    	}
-    	@media screen and (max-width: $mobileLarge) {
-    		@include canvasResponsive();
-    	}
-	}
-	#particles-js {
-	    width: 100%;
-	    height: 100vh;
-	    position: relative;
-
-	}
-
+    background: $bere;
+    font-family: 'Roboto', sans-serif;
+    a{
+        text-decoration: none;
+    }
+}
+/*particulas canvas*/    
+canvas{
+	position: relative;
+    margin-top: -44%;
+    @media screen and (max-width: $mobileSmall) {
+    	@include canvasResponsive();
+    }
+    @media screen and (max-width: $mobileMedium) {
+    	@include canvasResponsive();
+    }
+    @media screen and (max-width: $mobileLarge) {
+    	@include canvasResponsive();
+    }
+}
+#particles-js {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+/*Header - Nav*/
+header.navBar{
+    div.navbar-header{  
+        button.navbar-toggle{
+            border: none;
+            background: transparent;
+            &.collapse{
+                border: none;
+                background: transparent;
+            }
+            span.icon-bar{
+                background-color: $cele;
+            }
+        }
+    }
+    div#bs-example-navbar-collapse-1{
+        &.navbar-collapse.navbar-right.collapse.in{
+            border-color:transparent;
+        }
+        ul{
+            position: relative;
+            float: right;
+        }
+    }
+    /*transparencia a nav*/   
+    nav.navbar.navbar-inverse.navbar-fixed-top{
+        background-color: transparent;
+        border-color:transparent;
+    }
+    #bs-example-navbar-collapse-1{
+        ul{
+            li{
+                a{
+                    color: $cele;
+                }
+            }
+        }
+    }
+    ul.nav.navbar-nav{
+        li{
+            a{
+                i.fa.fa-home.fa-2x:hover, i.fa.fa-user.fa-2x:hover,i.fa.fa-cog.fa-2x:hover,
+                i.fa.fa-briefcase.fa-2x:hover,i.fa.fa-envelope.fa-2x:hover {
+                    color: $amarillo;
+                }
+            }
+        }
+    }
+}
+/*BIENVENIDA*/
+.bienvenida{
+    div.container{
+        div.row{
+            /*vista desktop*/
+            div.col-md-6{
+                position:relative;
+                /*imagen logo*/
+                img{
+                    position:relative;
+                    z-index:2;
+                    top: -8vh;
+                    @media screen and (max-width: $mobileSmall) {
+                        @include welcomeResponsive();
+                    }
+                    @media screen and (max-width: $mobileMedium) {
+                        @include welcomeResponsive();
+                    }
+                    @media screen and (max-width: $mobileLarge) {
+                        @include welcomeResponsive();
+                    }
+                }
+                /*caja texto dinamico*/
+                div.presentacion{
+                    font-family: 'Anton', sans-serif;
+                    color: $cele;
+                    position: relative;
+                    top: 25vh;
+                    z-index: 1;
+                    /*quitar palabra diseñadora*/
+                    #designer{
+                        @media screen and (max-width: $mobileSmall) {
+                            display:none;
+                        }
+                        @media screen and (max-width: $mobileMedium) {
+                            display:none;
+                        }
+                        @media screen and (max-width: $mobileLarge) {
+                            display:none;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    /*responsive caja transparente*/
+    div#introMySelf.presentacion.col-xs-12.col-sm-12{
+        @media screen and (max-width: $mobileSmall) {
+            background-color:rgba(0, 0, 0, 0.3);
+            @include presentResponsive();
+            width: 94%;
+            padding-bottom: 10%;
+        }
+        @media screen and (max-width: $mobileMedium) {
+            background-color:rgba(0, 0, 0, 0.3);
+            @include presentResponsive();
+        }
+        @media screen and (max-width: $mobileLarge) {
+            background-color:rgba(0, 0, 0, 0.3);
+            @include presentResponsive();
+        }
+        h2{
+            @media screen and (max-width: $mobileSmall) {
+                font-size: 20px;
+            }
+        }
+    }
+    div.row{
+        .col-md-12.col-xs-12.col-sm-12{
+            position:relative;
+            z-index: 2;
+            .redes.text-center{
+                padding-left: 27%;
+                position: relative;
+                /*responsive iconos de contacto*/
+                @media screen and (max-width: $mobileSmall) {
+                    @include redesResponsive();
+                        font-size: 20px;
+                        top: 5vh;
+                    }
+                    @media screen and (max-width: $mobileMedium) {
+                        @include redesResponsive();
+                        top: 10vh;
+                    }
+                    @media screen and (max-width: $mobileLarge) {
+                        @include redesResponsive();
+                        top: 10vh;
+                    }
+                    ul{
+                        text-decoration:none;
+                        li{
+                            position: relative;
+                            display: inline-flex;
+                            padding: 0 2%;
+                            i{
+                                font-size: 40px;
+                                color: $cele;
+                                &:hover{
+                                    color: $amarillo;
+                                }
+                                @media screen and (max-width: $mobileSmall) {
+                                    font-size: 30px;
+                                }
+                            }
+                            a{
+                                font-size: 20px;
+                                color: $cele;
+                                text-decoration:none;
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
