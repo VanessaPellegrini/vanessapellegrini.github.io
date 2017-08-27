@@ -5,7 +5,6 @@
 }
 body{
     background: $bere;
-    font-family: 'Roboto', sans-serif;
     a{
         text-decoration: none;
     }
@@ -102,7 +101,7 @@ header.navBar{
                 }
                 /*caja texto dinamico*/
                 div.presentacion{
-                    font-family: 'Anton', sans-serif;
+                    font-family: $firstFont;
                     color: $cele;
                     position: relative;
                     top: 25vh;
@@ -258,6 +257,9 @@ header.navBar{
             text-align: justify;
             h2{
                 padding-bottom: 10%;
+                font-family: $secondaryFont;
+                color: $bere;
+                font-weight: 700;
             }
             h2, article{
                 @media screen and (max-width: $mobileSmall) { 
@@ -272,6 +274,7 @@ header.navBar{
             }
             a{
                 color: #fff;
+                font-weight: bold;
             }
 
         }
@@ -300,6 +303,8 @@ header.navBar{
     h2{
         color: $bere;
         padding-bottom: 10%;
+        font-family: $secondaryFont;
+        font-weight: 700;
     }
     .honeycomb{
         @media screen and (max-width: $mobileSmall) { 
@@ -341,19 +346,26 @@ header.navBar{
     background-color: $amarillo;
     border-top: 5px solid $bere;
     height: 100vh;
+    padding-bottom: 20%;
+    h2.text-center{
+        font-family: $secondaryFont;
+    }
     /*centrado de portafolio*/
     @media screen and (max-width: $mobileSmall) { 
-        @include portfolioResponsive();
+        height:100%;
     }
     @media screen and (max-width: $mobileMedium) {
-        @include portfolioResponsive();
+        height:100%;
     }
     @media screen and (max-width: $mobileLarge) {
-        @include portfolioResponsive();
+        height:100%;
     }
     div#misTrabajos.col-md-12.col-xs-12{
         padding: 0;
         margin: 0;
+        div.row{
+            margin: 0;
+        }
         h2.text-center.conoceMisTrabajos{
            @media screen and (max-width: $mobileSmall) { 
                 @include conoceMisTrabajos();
@@ -375,19 +387,7 @@ header.navBar{
         }
         @media screen and (max-width: $mobileLarge) {
             @include projectsResponsive();
-        }
-        /*correccion grilla responsive mobile*/ 
-        div.grid{
-            @media screen and (max-width: $mobileSmall) { 
-                @include gridResponsive();
-            }
-            @media screen and (max-width: $mobileMedium) {
-                @include gridResponsive();
-            }
-            @media screen and (max-width: $mobileLarge) {
-                @include gridResponsive();
-            }
-        }       
+        }    
     }
     .row{
         .col-md-12{
@@ -398,4 +398,56 @@ header.navBar{
         }
     }
 }
-    
+/*footer*/
+footer#contacto.container{
+    background-color:$cele;
+    border-top: 5px solid $bere;
+    height: 100%;
+    padding: 15% 0 15% 0;
+    .row{
+        margin: 0;
+    }
+    h4{
+        font-family: $firstFont;
+        font-weight: 700;
+        color: $bere;
+        font-size: 24px;
+    }
+    h5{
+       color: $bere; 
+    }
+    ul.text-center{
+        list-style: none;
+        position: relative;
+        display: inline-flex;
+        left: -4vh;
+        li{
+            a.redSocial{
+                padding: 10% 50%;
+                font-size:30px;
+                position:relative;
+                top: 3vh;
+                color: $bere;
+                text-decoration:none;
+                &:hover{
+                    color: $amarillo;
+                }
+            }
+        }
+    }
+    div.col-md-12.col-xs-12.text-center{
+        padding: 0;
+    }
+    div.contacto{
+        h5, h4{
+            padding: 5% 0 5% 0;
+        }
+    }
+    .cajaCorp{
+        padding-top: 15%;
+        margin: 0;
+        p{
+            color: $bere;
+        }
+    }
+}    
