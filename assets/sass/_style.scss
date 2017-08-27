@@ -139,12 +139,23 @@ header.navBar{
             background-color:rgba(0, 0, 0, 0.3);
             @include presentResponsive();
         }
-        h2{
+        h2, h4{
             @media screen and (max-width: $mobileSmall) {
                 font-size: 20px;
+                position:sticky;
+                padding: 0 13%;
+            }
+            @media screen and (max-width: $mobileMedium) {
+                position:sticky;
+                padding: 0 13%;
+            }
+            @media screen and (max-width: $mobileLarge) {
+                position:sticky;
+                padding: 0 13%;
             }
         }
     }
+    /*responsive iconos de contacto*/
     div.row{
         .col-md-12.col-xs-12.col-sm-12{
             position:relative;
@@ -152,45 +163,239 @@ header.navBar{
             .redes.text-center{
                 padding-left: 27%;
                 position: relative;
-                /*responsive iconos de contacto*/
                 @media screen and (max-width: $mobileSmall) {
                     @include redesResponsive();
-                        font-size: 20px;
-                        top: 5vh;
-                    }
-                    @media screen and (max-width: $mobileMedium) {
-                        @include redesResponsive();
-                        top: 10vh;
-                    }
-                    @media screen and (max-width: $mobileLarge) {
-                        @include redesResponsive();
-                        top: 10vh;
-                    }
-                    ul{
-                        text-decoration:none;
-                        li{
-                            position: relative;
-                            display: inline-flex;
-                            padding: 0 2%;
-                            i{
-                                font-size: 40px;
-                                color: $cele;
-                                &:hover{
-                                    color: $amarillo;
-                                }
-                                @media screen and (max-width: $mobileSmall) {
-                                    font-size: 30px;
-                                }
+                    font-size: 20px;
+                    top: 5vh;
+                }
+                @media screen and (max-width: $mobileMedium) {
+                    @include redesResponsive();
+                    top: 10vh;
+                }
+                @media screen and (max-width: $mobileLarge) {
+                    @include redesResponsive();
+                    top: 10vh;
+                }
+                ul{
+                    text-decoration:none;
+                    li{
+                        position: relative;
+                        display: inline-flex;
+                        padding: 0 2%;
+                        i{
+                            font-size: 40px;
+                            color: $cele;
+                            &:hover{
+                                color: $amarillo;
                             }
-                            a{
-                                font-size: 20px;
-                                color: $cele;
-                                text-decoration:none;
-                            }   
+                            @media screen and (max-width: $mobileSmall) {
+                                font-size: 30px;
+                            }
                         }
+                        a{
+                            font-size: 20px;
+                            color: $cele;
+                            text-decoration:none;
+                        }   
+                        
                     }
                 }
             }
         }
     }
+}
+/*ABOUT ME*/
+.aboutMe.container{
+    background-color: $cele;
+    height: 100vh;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    padding-top: 6%;
+    @media screen and (max-width: $mobileMedium) {
+        height: 120vh;
+    }
+    /*imagen sobre mi*/
+    .row{
+        .col-md-6.izquierda{
+            height:66vh;
+            /*imagen desktop*/
+            .imgAbout{
+                img.imgCorriente{
+                    position: relative;
+                    top: 2vh;
+                    left: 26vh;
+                    @media screen and (max-width: $mobileSmall) {
+                        display:none;
+                    }
+                    @media screen and (max-width: $mobileMedium) {
+                        display:none;
+                    }
+                    @media screen and (max-width: $mobileLarge) {
+                        display:none;
+                    }
+                }
+                /*imagen mobile*/
+                img.imgResponsive{
+                    display:none;
+                    @media screen and (max-width: $mobileSmall) {
+                        @include aboutMeResponsive();
+                    }
+                    @media screen and (max-width: $mobileMedium) {
+                        @include aboutMeResponsive();
+                    }
+                    @media screen and (max-width: $mobileLarge) {
+                        @include aboutMeResponsive();
+                    }
+                    
+                }
+            }
+        }
+    }
+    /*caja de texto about me*/
+    .col-md-4.offset-md-2{
+        .cajaTexto{
+            color: $bere;
+            text-align: justify;
+            h2{
+                padding-bottom: 10%;
+            }
+            h2, article{
+                @media screen and (max-width: $mobileSmall) { 
+                    @include aboutMeText();
+                }
+                @media screen and (max-width: $mobileMedium) {
+                    @include aboutMeText();
+                }
+                @media screen and (max-width: $mobileLarge) {
+                    @include aboutMeText();
+                }
+            }
+            a{
+                color: #fff;
+            }
+
+        }
+    }
+}
+/*HABILIDADES*/
+.habilities.container{
+    padding: 6%;
+    background-image: url(../../dist/img/wallUno.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height:100vh;
+    border-top: 5px solid $bere;
+    @media screen and (max-width: $mobileSmall) { 
+        padding-top: 15%;
+        padding-left: 10%;
+    }
+    @media screen and (max-width: $mobileMedium) {
+        padding-top: 15%;
+        padding-left: 10%;
+    }
+    @media screen and (max-width: $mobileLarge) {
+        padding-top: 15%;
+        padding-left: 10%;
+    }
+    h2{
+        color: $bere;
+        padding-bottom: 10%;
+    }
+    .honeycomb{
+        @media screen and (max-width: $mobileSmall) { 
+            @include honeycombResponsive();
+        }
+        @media screen and (max-width: $mobileMedium) {
+            @include honeycombResponsive();
+        }
+        @media screen and (max-width: $mobileLarge) {
+            @include honeycombResponsive();
+        }
+        .hexahover{
+            @media screen and (max-width: $mobileSmall) { 
+                display:none;
+            }
+            @media screen and (max-width: $mobileMedium) {
+                display:none;
+            }
+            @media screen and (max-width: $mobileLarge) {
+                display:none;
+            }   
+        }
+        .hexahover.responsiveHexa{
+            @media screen and (max-width: $mobileSmall) { 
+                display:block;
+            }
+            @media screen and (max-width: $mobileMedium) {
+                display:block;
+            }
+            @media screen and (max-width: $mobileLarge) {
+                display:block;
+            }
+        }
+                
+    }
+}
+/*PROYECTOS*/
+.projects.container{
+    background-color: $amarillo;
+    border-top: 5px solid $bere;
+    height: 100vh;
+    /*centrado de portafolio*/
+    @media screen and (max-width: $mobileSmall) { 
+        @include portfolioResponsive();
+    }
+    @media screen and (max-width: $mobileMedium) {
+        @include portfolioResponsive();
+    }
+    @media screen and (max-width: $mobileLarge) {
+        @include portfolioResponsive();
+    }
+    div#misTrabajos.col-md-12.col-xs-12{
+        padding: 0;
+        margin: 0;
+        h2.text-center.conoceMisTrabajos{
+           @media screen and (max-width: $mobileSmall) { 
+                @include conoceMisTrabajos();
+            }
+            @media screen and (max-width: $mobileMedium) {
+                @include conoceMisTrabajos();
+            }
+            @media screen and (max-width: $mobileLarge) {
+                @include conoceMisTrabajos();
+            } 
+        }
+    }
+    div.col-md-4.col-xs-12{
+        @media screen and (max-width: $mobileSmall) { 
+            @include projectsResponsive();
+        }
+        @media screen and (max-width: $mobileMedium) {
+            @include projectsResponsive();
+        }
+        @media screen and (max-width: $mobileLarge) {
+            @include projectsResponsive();
+        }
+        /*correccion grilla responsive mobile*/ 
+        div.grid{
+            @media screen and (max-width: $mobileSmall) { 
+                @include gridResponsive();
+            }
+            @media screen and (max-width: $mobileMedium) {
+                @include gridResponsive();
+            }
+            @media screen and (max-width: $mobileLarge) {
+                @include gridResponsive();
+            }
+        }       
+    }
+    .row{
+        .col-md-12{
+            //margin-top: 3%;
+            h3{
+                color: $bere;
+            }
+        }
+    }
+}
     
