@@ -143,6 +143,12 @@ header.navBar{
                 font-size: 20px;
                 position:sticky;
                 padding: 0 13%;
+                position:relative;
+                left: 1.5vh;
+            }
+            @media screen and (max-width: $mobileLarge) {
+                position:relative;
+                left: 2vh;
             }
         }
     }
@@ -261,12 +267,15 @@ header.navBar{
             h2, article{
                 @media screen and (max-width: $mobileSmall) { 
                     @include aboutMeText();
+                    padding: 0;
                 }
                 @media screen and (max-width: $mobileMedium) {
                     @include aboutMeText();
+                    padding: 0;
                 }
                 @media screen and (max-width: $mobileLarge) {
                     @include aboutMeText();
+                    padding: 0;
                 }
             }
             a{

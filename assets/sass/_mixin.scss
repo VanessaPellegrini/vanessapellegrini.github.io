@@ -54,7 +54,6 @@
 }
 @mixin presentResponsive(){
   position:relative;
-/*   left: 2.5vh; */
   top: 5vh;
   padding:0;
 }
@@ -81,7 +80,8 @@
 /*responsive habilities*/
 @mixin honeycombResponsive(){
   position:relative;
-  left: 2.5vh;
+  left: 0.5vh;
+  top: 2vh;
   z-index: 5;
   width: 50%;
   margin: 0;
