@@ -14,10 +14,10 @@ canvas{
 	position: relative;
     margin-top: -44%;
     @media screen and (max-width: $mobileSmall) {
-    	@include canvasResponsive();
+        @include canvasResponsive();
     }
     @media screen and (max-width: $mobileMedium) {
-    	@include canvasResponsive();
+        @include canvasResponsive();
     }
     @media screen and (max-width: $mobileLarge) {
     	@include canvasResponsive();
@@ -161,9 +161,7 @@ header.navBar{
                 padding-left: 27%;
                 position: relative;
                 @media screen and (max-width: $mobileSmall) {
-                    @include redesResponsive();
-                    font-size: 20px;
-                    top: 8vh;
+                    display:none;
                 }
                 @media screen and (max-width: $mobileMedium) {
                     @include redesResponsive();
@@ -296,8 +294,7 @@ header.navBar{
     border-top: 5px solid $bere;
     @media screen and (max-width: $mobileSmall) { 
         padding-top: 15%;
-        padding-left: 10%;
-        height: 112vh;
+        height: 120vh;
     }
     @media screen and (max-width: $mobileMedium) {
         padding-top: 15%;
@@ -306,6 +303,7 @@ header.navBar{
     @media screen and (max-width: $mobileLarge) {
         padding-top: 15%;
         padding-left: 10%;
+        height:100vh;
     }
     h2{
         color: $bere;
@@ -317,7 +315,7 @@ header.navBar{
         top: -12vh;
         @media screen and (max-width: $mobileSmall) { 
             @include honeycombResponsive();
-            left: -2.5vh;
+            left:-1vh;
         }
         @media screen and (max-width: $mobileMedium) {
             @include honeycombResponsive();
@@ -353,6 +351,7 @@ header.navBar{
 /*PROYECTOS*/
 .projects.container{
     padding-top:5%;
+    padding-left: 3%;
     background-color: $amarillo;
     border-top: 5px solid $bere;
     height: 120vh;
@@ -369,6 +368,7 @@ header.navBar{
     }
     @media screen and (max-width: $mobileLarge) {
         height:100%;
+        padding-bottom:10%;
     }
     div#misTrabajos.col-md-12.col-xs-12{
         padding: 0;
