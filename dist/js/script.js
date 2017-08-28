@@ -12722,8 +12722,10 @@ $(document).ready(function(){
 	        $this.text($this.data('Los videojuegos y ver películas.'));
 	    }
 	);
-	/*habilidades*/
-	
+	//en caso de que la persona utilice landscape deberá aparecer un mensaje indicando que solo debe usarse portrait
+/*if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape!");
+}*/
 });
 /* -----------------------------------------------
 /* Author : Vincent Garreau  - vincentgarreau.com

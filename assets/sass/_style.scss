@@ -127,12 +127,12 @@ header.navBar{
         @media screen and (max-width: $mobileSmall) {
             background-color:rgba(0, 0, 0, 0.3);
             @include presentResponsive();
-            width: 94%;
             padding-bottom: 10%;
         }
         @media screen and (max-width: $mobileMedium) {
             background-color:rgba(0, 0, 0, 0.3);
             @include presentResponsive();
+
         }
         @media screen and (max-width: $mobileLarge) {
             background-color:rgba(0, 0, 0, 0.3);
@@ -141,14 +141,6 @@ header.navBar{
         h2, h4{
             @media screen and (max-width: $mobileSmall) {
                 font-size: 20px;
-                position:sticky;
-                padding: 0 13%;
-            }
-            @media screen and (max-width: $mobileMedium) {
-                position:sticky;
-                padding: 0 13%;
-            }
-            @media screen and (max-width: $mobileLarge) {
                 position:sticky;
                 padding: 0 13%;
             }
@@ -165,7 +157,7 @@ header.navBar{
                 @media screen and (max-width: $mobileSmall) {
                     @include redesResponsive();
                     font-size: 20px;
-                    top: 5vh;
+                    top: 8vh;
                 }
                 @media screen and (max-width: $mobileMedium) {
                     @include redesResponsive();
@@ -238,6 +230,7 @@ header.navBar{
                     display:none;
                     @media screen and (max-width: $mobileSmall) {
                         @include aboutMeResponsive();
+                        left: 11vh;
                     }
                     @media screen and (max-width: $mobileMedium) {
                         @include aboutMeResponsive();
@@ -251,15 +244,19 @@ header.navBar{
         }
     }
     /*caja de texto about me*/
-    .col-md-4.offset-md-2{
+    .col-md-5.offset-md-1{
         .cajaTexto{
             color: $bere;
             text-align: justify;
             h2{
-                padding-bottom: 10%;
+                padding-top: 20%;
+                padding-bottom: 15%;
                 font-family: $secondaryFont;
                 color: $bere;
                 font-weight: 700;
+            }
+            article{
+                font-size: 16px;
             }
             h2, article{
                 @media screen and (max-width: $mobileSmall) { 
@@ -286,11 +283,12 @@ header.navBar{
     background-image: url(../../dist/img/wallUno.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height:100vh;
+    height:120vh;
     border-top: 5px solid $bere;
     @media screen and (max-width: $mobileSmall) { 
         padding-top: 15%;
         padding-left: 10%;
+        height: 112vh;
     }
     @media screen and (max-width: $mobileMedium) {
         padding-top: 15%;
@@ -307,8 +305,10 @@ header.navBar{
         font-weight: 700;
     }
     .honeycomb{
+        top: -12vh;
         @media screen and (max-width: $mobileSmall) { 
             @include honeycombResponsive();
+            left: -2.5vh;
         }
         @media screen and (max-width: $mobileMedium) {
             @include honeycombResponsive();
@@ -343,12 +343,13 @@ header.navBar{
 }
 /*PROYECTOS*/
 .projects.container{
+    padding-top:5%;
     background-color: $amarillo;
     border-top: 5px solid $bere;
-    height: 100vh;
-    padding-bottom: 20%;
+    height: 120vh;
     h2.text-center{
         font-family: $secondaryFont;
+        font-weight: bold;
     }
     /*centrado de portafolio*/
     @media screen and (max-width: $mobileSmall) { 
@@ -377,10 +378,16 @@ header.navBar{
                 @include conoceMisTrabajos();
             } 
         }
+        h2.hoverProyecto{
+            @media screen and (max-width: $mobileSmall) { 
+                font-size: 25px;
+            }
+        }
     }
     div.col-md-4.col-xs-12{
         @media screen and (max-width: $mobileSmall) { 
-            @include projectsResponsive();
+            position: relative;
+            left: -3.1vh;
         }
         @media screen and (max-width: $mobileMedium) {
             @include projectsResponsive();
@@ -403,7 +410,17 @@ footer#contacto.container{
     background-color:$cele;
     border-top: 5px solid $bere;
     height: 100%;
-    padding: 15% 0 15% 0;
+    padding: 5% 0 2% 0;
+    @media screen and (max-width: $mobileLarge) {
+        padding: 15% 0 15% 0;
+    }
+    .heart{
+        position:relative;
+        width: 15%;
+        @media screen and (max-width: $mobileLarge) {
+            width: 25%;
+        }
+    }
     .row{
         margin: 0;
     }
@@ -414,7 +431,12 @@ footer#contacto.container{
         font-size: 24px;
     }
     h5{
-       color: $bere; 
+       color: $bere;
+       font-family: $secondaryFont;
+       font-size: 25px;
+       @media screen and (max-width: $mobileLarge) {
+            font-size: 18px;
+        }
     }
     ul.text-center{
         list-style: none;
@@ -440,14 +462,21 @@ footer#contacto.container{
     }
     div.contacto{
         h5, h4{
-            padding: 5% 0 5% 0;
+            padding: 2% 0 2% 0;
+            @media screen and (max-width: $mobileLarge) {
+                padding: 5% 0 5% 0;
+            }
         }
     }
     .cajaCorp{
-        padding-top: 15%;
+        padding-top: 4%;
         margin: 0;
+        @media screen and (max-width: $mobileLarge) {
+            padding-top: 15%;
+        }
         p{
             color: $bere;
+            font-family: $firstFont;
         }
     }
 }    
